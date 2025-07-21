@@ -1,6 +1,6 @@
 # git
-echo "getting base-devel..."
-sudo pacman -S --needed base-devel
+echo "getting basic requirements..."
+sudo pacman -S --needed base-devel meson ninja cmake
 echo "---------------"
 mkdir ~/.config
 
@@ -11,7 +11,7 @@ echo "getting font..."
 sudo pacman -S ttf-iosevkatermslab-nerd
 echo "configuring kitty config..."
 mkdir ~/.config/kitty
-mv kitty/kitty.conf ~/.config/kitty/kitty.conf
+mv configs/kitty/kitty.conf ~/.config/kitty/kitty.conf
 echo "--------------"
 
 # editor
@@ -39,9 +39,21 @@ mv starship/starship.toml ~/.config/starship.toml
 mv fastfetch/config.jsonc ~/.config.
 echo "--------------"
 
+# tlp stuff
+echo "getting tlp and acpi..."
+sudo pacman -S tlp acpi
+echo "starting tlp..."
+sudo systemctl enable tlp
+sudo systemctl start tlp
+echo "-------------"
+
 # cmus
-echo "cmus stuf..."
+echo "cmus stuff..."
+sudo pacman -S cmus
 mkdir ~/.Scripts
 mv scripts/cmus_notif.sh ~/.Scripts/cmus_notif.sh
 mkdir ~/Music
 mv scripts/reset.sh ~/Music/reset.sh && mv scripts/dw.sh ~/Music/dw.sh
+
+# bashrc
+mv bashrc ~/.bashrc
