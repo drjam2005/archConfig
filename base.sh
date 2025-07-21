@@ -42,6 +42,6 @@ echo "--------------"
 # cmus
 echo "cmus stuf..."
 mkdir ~/.Scripts
-mv cmus_notif.sh ~/.Scripts/cmus_notif.sh
+mv scripts/cmus_notif.sh ~/.Scripts/cmus_notif.sh
 mkdir ~/Music
-mv reset.sh ~/Music/reset.sh && mv dw.sh ~/Music/dw.sh
+mv scripts/reset.sh ~/Music/reset.sh && mv dw.sh ~/Music/dw.sh
