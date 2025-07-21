@@ -38,7 +38,8 @@ echo "---------------"
 # misc
 echo "misc stuff..."
 mv starship/starship.toml ~/.config/starship.toml
-mv fastfetch/config.jsonc ~/.config.
+mkdir ~/.config/fastfetch
+mv configs/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
 echo "--------------"
 
 # tlp stuff
