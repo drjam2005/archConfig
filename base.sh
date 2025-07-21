@@ -19,7 +19,9 @@ echo "getting neo/vim and packages..."
 sudo pacman -S vim neovim npm unzip 7zip yazi
 echo "getting neo/vim config..."
 git clone https://github.com/drjam2005/nvimConfig
+rm -r ~/.config/nvim
 mv nvimConfig ~/.config/nvim
+rm ~/.vimrc
 mv ~/.config/nvim/.vimrc ~/.vimrc
 echo "--------------"
 
@@ -56,4 +58,4 @@ mkdir ~/Music
 mv scripts/reset.sh ~/Music/reset.sh && mv scripts/dw.sh ~/Music/dw.sh
 
 # bashrc
-mv bashrc ~/.bashrc
+mv scripts/.bashrc ~/.bashrc
