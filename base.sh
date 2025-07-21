@@ -54,7 +54,9 @@ echo "-------------"
 
 # cmus
 echo "cmus stuff..."
-sudo pacman -S cmus
+sudo pacman -S cmus yt-dlp id3v2 ffmpeg
+mkdir ~/.config/cmus
+mv configs/cmus/rose-pine.theme ~/.config/cmus/.
 mkdir ~/.Scripts
 mv scripts/cmus_notif.sh ~/.Scripts/cmus_notif.sh
 mkdir ~/Music
