@@ -4,6 +4,7 @@ sudo pacman -S i3-wm xorg-server xorg polybar feh
 echo "exec i3" >> ~/.xinitrc
 echo "getting misc stuff... (rofi dunst cmus flameshot qutebrowser ly zathura)"
 sudo pacman -S rofi dunst cmus flameshot tlp qutebrowser ly zathura-pdf-mupdf
+mv qutebrowser/ ~/.config/.
 echo "--------------"
 
 # ly stuff
