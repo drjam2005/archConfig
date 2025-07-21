@@ -44,4 +44,4 @@ echo "cmus stuf..."
 mkdir ~/.Scripts
 mv scripts/cmus_notif.sh ~/.Scripts/cmus_notif.sh
 mkdir ~/Music
-mv scripts/reset.sh ~/Music/reset.sh && mv dw.sh ~/Music/dw.sh
+mv scripts/reset.sh ~/Music/reset.sh && mv scripts/dw.sh ~/Music/dw.sh
