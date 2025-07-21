@@ -35,7 +35,7 @@ echo "---------------"
 
 # misc
 echo "misc stuff..."
-mv starship.toml ~/.config/starship.toml
+mv starship/starship.toml ~/.config/starship.toml
 mv fastfetch/config.jsonc ~/.config.
 echo "--------------"
 
