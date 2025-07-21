@@ -1,6 +1,6 @@
 # git
-echo "getting git..."
-sudo pacman -S --needed git
+echo "getting base-devel..."
+sudo pacman -S --needed base-devel
 echo "---------------"
 mkdir ~/.config
 

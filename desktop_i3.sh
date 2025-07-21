@@ -1,7 +1,7 @@
 # i3-wm
 echo "getting i3-wm... (i3-wm xorg-server polybar feh)"
 sudo pacman -S i3-wm xorg-server xorg polybar feh
-echo "getting misc stuff... (rofi dunst cmus flameshot tlp qutebrowser ly)"
+echo "getting misc stuff... (rofi dunst cmus flameshot qutebrowser ly)"
 sudo pacman -S rofi dunst cmus flameshot tlp qutebrowser ly
 echo "--------------"
 
@@ -21,6 +21,7 @@ mv tlp/tlp.conf /etc/tlp.conf
 echo "starting tlp..."
 sudo systemctl enable tlp
 sudo systemctl start tlp
+echo "-------------"
 
 # ly stuff
 echo "enabling ly..."
