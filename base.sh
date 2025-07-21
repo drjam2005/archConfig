@@ -19,6 +19,8 @@ echo "getting neo/vim and packages..."
 sudo pacman -S vim neovim npm unzip 7zip yazi
 echo "getting neo/vim config..."
 git clone https://github.com/drjam2005/nvimConfig
+rm -r ~/.config/yazi
+mv yazi ~/.config/.
 rm -r ~/.config/nvim
 mv nvimConfig ~/.config/nvim
 rm ~/.vimrc
