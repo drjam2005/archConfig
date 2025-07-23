@@ -1,6 +1,6 @@
 # git
 echo "getting basic requirements..."
-sudo pacman -S --needed base-devel meson ninja cmake
+sudo pacman -S --needed git base-devel meson ninja cmake
 echo "---------------"
 mkdir ~/.config
 
