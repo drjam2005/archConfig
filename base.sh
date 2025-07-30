@@ -79,3 +79,4 @@ mv scripts/reset.sh ~/Music/reset.sh && mv scripts/dw.sh ~/Music/dw.sh
 
 # bashrc
 mv scripts/.bashrc ~/.bashrc
+
