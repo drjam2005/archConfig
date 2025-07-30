@@ -42,7 +42,7 @@ if [ $1 = "nightlyNvim" ]; then
     echo "getting (nightly) neo/vim and packages..."
     sudo pacman -S vim npm unzip 7zip yazi
     echo "getting (nightly) neo/vim config..."
-    git clone -b nightlyConfig https://github.com/drjam2005/nvimConfig
+    git clone -b nightly https://github.com/drjam2005/nvimConfig
     rm -r ~/.config/yazi
     mv yazi ~/.config/.
     rm -r ~/.config/nvim
