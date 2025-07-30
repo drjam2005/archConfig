@@ -14,18 +14,18 @@ mkdir ~/.config/kitty
 mv configs/kitty/kitty.conf ~/.config/kitty/kitty.conf
 echo "--------------"
 
-# editor
-echo "getting neo/vim and packages..."
-sudo pacman -S vim neovim npm unzip 7zip yazi
-echo "getting neo/vim config..."
-git clone https://github.com/drjam2005/nvimConfig
-rm -r ~/.config/yazi
-mv yazi ~/.config/.
-rm -r ~/.config/nvim
-mv nvimConfig ~/.config/nvim
-rm ~/.vimrc
-mv ~/.config/nvim/.vimrc ~/.vimrc
-echo "--------------"
+if [ $1 != "nightlyNvim" ]; then
+    echo "getting neo/vim and packages..."
+    sudo pacman -S neovim vim npm unzip 7zip yazi
+    echo "getting neo/vim config..."
+    git clone https://github.com/drjam2005/nvimConfig
+    rm -r ~/.config/yazi
+    mv yazi ~/.config/.
+    rm -r ~/.config/nvim
+    mv nvimConfig ~/.config/nvim
+    rm ~/.vimrc
+    mv ~/.config/nvim/.vimrc ~/.vimrc
+fi
 
 # yay
 echo "getting yay..."
@@ -36,6 +36,21 @@ makepkg -si
 cd ..
 echo "yay downloaded!"
 echo "---------------"
+
+if [ $1 = "nightlyNvim" ]; then
+    yay -S neovim-nightly-bin
+    echo "getting (nightly) neo/vim and packages..."
+    sudo pacman -S vim npm unzip 7zip yazi
+    echo "getting (nightly) neo/vim config..."
+    git clone -b nightlyConfig https://github.com/drjam2005/nvimConfig
+    rm -r ~/.config/yazi
+    mv yazi ~/.config/.
+    rm -r ~/.config/nvim
+    mv nvimConfig ~/.config/nvim
+    rm ~/.vimrc
+    mv ~/.config/nvim/.vimrc ~/.vimrc
+    echo "--------------"
+fi
 
 # misc
 echo "misc stuff..."
