@@ -6,12 +6,13 @@ mkdir ~/.config
 
 # terminal emulator
 echo "getting kitty... (+ imagemagick starship fastfetch)"
-sudo pacman -S kitty imagemagick starship fastfetch
+sudo pacman -S kitty imagemagick starship fastfetch tmux
 echo "getting font..."
 sudo pacman -S ttf-iosevkatermslab-nerd
 echo "configuring kitty config..."
 mkdir ~/.config/kitty
 mv configs/kitty/kitty.conf ~/.config/kitty/kitty.conf
+mv configs/tmux/.tmux.conf ~/.tmux.conf
 echo "--------------"
 
 if [ $1 != "nightlyNvim" ]; then
